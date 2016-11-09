@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane minWidth="315.0" prefHeight="307.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <VBox id="VBox" alignment="CENTER" layoutX="14.0" layoutY="17.0" spacing="5.0">
+            <children>
+                <Button fx:id="myButton" mnemonicParsing="false" prefWidth="-1.0" text="Button" VBox.vgrow="SOMETIMES" />
+                <TextField fx:id="beforeText" prefWidth="168.0" promptText="BeforeText"/>
+                <TextField fx:id="afterText" prefWidth="168.0" promptText="AfterText"/>
+            </children>
+        </VBox>
+        <TextArea fx:id="outputTextArea" layoutX="13.0" layoutY="194.0" prefHeight="99.0" prefWidth="395.0" wrapText="true" />
+        <Separator layoutX="14.0" layoutY="182.0" prefWidth="395.0" />
+    </children>
+</AnchorPane>
