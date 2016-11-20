@@ -1,4 +1,4 @@
-package sample;
+package sample.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -26,10 +26,12 @@ public class Controller {
     private void initialize() {
         myButton.setOnAction((event) -> {
             String [] str = {beforeLink, afterLink};
+
             //String[] str = {"/Users/ashleychen/Desktop/REUSE/REUSE/sealuzh-tools-changedistiller-d7ceec136e94/resources/testdata/src_change/TestLeft.java", "/Users/ashleychen/Desktop/REUSE/REUSE/sealuzh-tools-changedistiller-d7ceec136e94/resources/testdata/src_change/TestRight.java"};
+            //String[] str = {"@../testfiles/TestLeft.txt","@../testfiles/TestRight.txt"};
             ArrayList<String> al = Analyze.analyze(str);
             for(int i=0;i<al.size();i++){
-                outputTextArea.appendText(al.get(i).toString());
+                outputTextArea.appendText("\n"+ al.get(i).toString());
             }
 
         });

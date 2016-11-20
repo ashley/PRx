@@ -8,5 +8,13 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="CD-S" level="project" />
+    <orderEntry type="library" name="src" level="project" />
+    <orderEntry type="library" name="github-api-1.80" level="project" />
+    <orderEntry type="library" name="jackson-core-2.2.2" level="project" />
+    <orderEntry type="library" name="jackson-annotations-2.0.1" level="project" />
+    <orderEntry type="library" name="commons-codec-1.10-javadoc" level="project" />
+    <orderEntry type="library" name="commons-io-2.5-javadoc" level="project" />
+    <orderEntry type="library" name="commons-io-2.5-javadoc1" level="project" />
+    <orderEntry type="library" name="commons-lang-2.6-javadoc" level="project" />
   </component>
 </module>

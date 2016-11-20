@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="src">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop/egit-github/org.eclipse.egit.github.core.tests/src" />
+      <root url="file://$USER_HOME$/Desktop/egit-github/org.eclipse.egit.github.core/src" />
+      <root url="file://$USER_HOME$/Desktop/egit-github/org.eclipse.mylyn.github.core/src" />
+      <root url="file://$USER_HOME$/Desktop/egit-github/org.eclipse.mylyn.github.tests/src" />
+      <root url="file://$USER_HOME$/Desktop/egit-github/org.eclipse.mylyn.github.ui/src" />
+    </SOURCES>
+  </library>
+</component>

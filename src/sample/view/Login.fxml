@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<AnchorPane minWidth="315.0" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoginController">
+    <children>
+        <VBox id="VBox" alignment="CENTER" layoutX="14.0" layoutY="17.0" spacing="5.0">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="100.0"  pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/Octocat.png" />
+                    </image>
+                </ImageView>
+                <TextField fx:id="username" prefWidth="168.0" promptText="Username"/>
+                <PasswordField fx:id="password" prefWidth="168.0" promptText="Password"/>
+                <Label fx:id="check"  prefWidth="200.0" text="Login to continue" wrapText="true" textAlignment="CENTER" >
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Label>
+                <Button fx:id="loginButton" mnemonicParsing="false" prefWidth="-1.0" text="Login" VBox.vgrow="SOMETIMES"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
