@@ -6,15 +6,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.kohsuke.github.GHEmail;
 import org.kohsuke.github.GitHub;
 import sample.application.Login;
 
+import java.awt.event.ActionEvent;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -72,6 +73,7 @@ public class LoginController  implements Initializable {
         password.textProperty().addListener((observable, oldValue, newValue) -> {
             pass = newValue;
         });
+
 
     }
 

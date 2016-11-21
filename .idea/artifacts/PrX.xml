@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PrX">
+    <output-path>$PROJECT_DIR$/out/artifacts/PrX</output-path>
+    <root id="archive" name="JavaFxApplication.jar">
+      <element id="module-output" name="PrX-JARS" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/REUSE/JARS/jackson-core-2.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/REUSE/JARS/jackson-databind-2.1.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/REUSE/JARS/commons-lang-2.6/commons-lang-2.6.jar" path-in-jar="/" />
+      <element id="library" level="project" name="src" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/REUSE/JARS/commons-io-2.5/commons-io-2.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/REUSE/JARS/commons-codec-1.10/commons-codec-1.10-tests.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/REUSE/JARS/commons-codec-1.10/commons-codec-1.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/REUSE/JARS/jackson-annotations-2.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/REUSE/JARS/github-api-1.80.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/CD-S.jar" path-in-jar="/" />
+      <element id="library" level="project" name="CD-S" />
+      <element id="library" level="project" name="commons-codec-1.10-javadoc" />
+      <element id="library" level="project" name="commons-io-2.5-javadoc" />
+      <element id="library" level="project" name="commons-lang-2.6-javadoc" />
+      <element id="library" level="project" name="github-api-1.80" />
+      <element id="library" level="project" name="jackson-core-2.2.2" />
+      <element id="library" level="project" name="jackson-annotations-2.0.1" />
+    </root>
+  </artifact>
+</component>
