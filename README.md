@@ -8,4 +8,5 @@ You will need the following libraries:
 * github-api-1.80
 * jackson-annotations-2.0.1
 * jackson-core-2.2.2
+* jackson-databind-2.1.4
 * CD-S (Found [Here](https://www.dropbox.com/s/jfa0oop3aj2a1ie/CD-S.jar?dl=0))
