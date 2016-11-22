@@ -1,0 +1,16 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.layout.*?>
+
+<AnchorPane minWidth="315.0" prefHeight="307.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SetupController">
+<children>
+    <VBox id="VBox" alignment="CENTER" layoutX="14.0" layoutY="17.0" spacing="5.0">
+        <children>
+            <Button fx:id="pubButton" mnemonicParsing="false" prefWidth="-1.0" text="Publisher" VBox.vgrow="SOMETIMES" />
+            <Button fx:id="devButton" mnemonicParsing="false" prefWidth="-1.0" text="Developer" VBox.vgrow="SOMETIMES" />
+        </children>
+    </VBox>
+    <Separator layoutX="14.0" layoutY="182.0" prefWidth="395.0" />
+</children>
+</AnchorPane>
+

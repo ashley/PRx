@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFxApplication.jnlp">
+  <information>
+    <title>PrX Title</title>
+    <vendor>Unknown</vendor>
+    <description>JavaFxApplication</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CD-S.jar" size="3045746" download="eager" />
+    <jar href="JavaFxApplication.jar" size="64376" download="eager" />
+    <jar href="commons-codec-1.10-tests.jar" size="256617" download="eager" />
+    <jar href="commons-codec-1.10.jar" size="284184" download="eager" />
+    <jar href="commons-io-2.5.jar" size="208696" download="eager" />
+    <jar href="commons-lang-2.6.jar" size="284220" download="eager" />
+    <jar href="github-api-1.80.jar" size="280436" download="eager" />
+    <jar href="jackson-annotations-2.0.1.jar" size="33377" download="eager" />
+    <jar href="jackson-core-2.2.2.jar" size="191738" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="Main"  name="JavaFxApplication" />
+  <update check="background"/>
+</jnlp>
