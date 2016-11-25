@@ -12,6 +12,7 @@
     <children>
         <VBox id="VBox" layoutX="14.0" layoutY="17.0" spacing="5.0">
             <children>
+                <Button fx:id="toggleButton" mnemonicParsing="false" prefWidth="-1.0" text="Profile" VBox.vgrow="SOMETIMES" />
                 <Label fx:id="instructions"  prefWidth="200.0" text="Paste the locations of your java files. The before field should be the location of your file before the change. The after field is the location of your file with the change." wrapText="true" textAlignment="CENTER" >
                     <font>
                         <Font size="10.0" />

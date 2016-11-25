@@ -8,6 +8,8 @@ import javafx.scene.control.TextField;
 import analyze.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import sample.application.Profile;
+import sample.application.Tree;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -18,6 +20,8 @@ public class Controller {
     @FXML private Button leftButton;
     @FXML private Button rightButton;
     @FXML private TextArea outputTextArea;
+    @FXML Button toggleButton = new Button();
+
     private String beforeLink;
     private String afterLink;
 
@@ -52,6 +56,16 @@ public class Controller {
                 }
             }
 
+        });
+
+        toggleButton.setOnAction((event) -> {
+            try{
+                Profile profile = new Profile();
+                profile.display(toggleButton);
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
         });
 
         leftButton.setOnAction((event) -> {

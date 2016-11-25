@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import org.kohsuke.github.GHEmail;
 import org.kohsuke.github.GitHub;
 import sample.application.Login;
+import sample.application.Tree;
 
 import java.awt.event.ActionEvent;
 import java.io.File;
@@ -51,15 +52,11 @@ public class LoginController  implements Initializable {
             check.setText(loginValid);
             if (login){
                 try{
-                    Parent root = FXMLLoader.load(getClass().getResource("/sample/view/UI.fxml"));
-                    Scene scene = new Scene(root, 600, 700);
-                    Stage currentStage = (Stage) loginButton.getScene().getWindow();
-                    currentStage.setTitle("PrX");
-                    currentStage.setScene(scene);
-                    currentStage.show();
+                    Tree tree = new Tree();
+                    tree.display(loginButton);
                 }
-                catch (Exception exception){
-                    exception.printStackTrace();
+                catch (Exception e){
+                    e.printStackTrace();
                 }
             }
 
@@ -94,6 +91,10 @@ public class LoginController  implements Initializable {
             return false;
         }
 
+    }
+
+    public GitHub getGit(){
+        return github;
     }
 
 
