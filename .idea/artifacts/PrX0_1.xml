@@ -13,13 +13,6 @@
       <element id="extracted-dir" path="$USER_HOME$/Desktop/REUSE/JARS/jackson-annotations-2.0.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Desktop/REUSE/JARS/github-api-1.80.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Desktop/CD-S.jar" path-in-jar="/" />
-      <element id="library" level="project" name="CD-S" />
-      <element id="library" level="project" name="commons-codec-1.10-javadoc" />
-      <element id="library" level="project" name="commons-io-2.5-javadoc" />
-      <element id="library" level="project" name="commons-lang-2.6-javadoc" />
-      <element id="library" level="project" name="github-api-1.80" />
-      <element id="library" level="project" name="jackson-core-2.2.2" />
-      <element id="library" level="project" name="jackson-annotations-2.0.1" />
     </root>
   </artifact>
 </component>
