@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import analyze.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.kohsuke.github.GitHub;
 import sample.application.Profile;
 import sample.application.Tree;
 
@@ -22,6 +23,7 @@ public class Controller {
     @FXML private TextArea outputTextArea;
     @FXML Button toggleButton = new Button();
 
+    private GitHub gitHub;
     private String beforeLink;
     private String afterLink;
 
@@ -61,6 +63,8 @@ public class Controller {
         toggleButton.setOnAction((event) -> {
             try{
                 Profile profile = new Profile();
+                System.out.println(gitHub.toString() + " In Controller");
+                profile.setupProfile(gitHub);
                 profile.display(toggleButton);
             }
             catch(Exception e){
@@ -89,10 +93,10 @@ public class Controller {
                 e.printStackTrace();
             }
         });
+    }
 
-
-
-
+    public void setupController(GitHub _gitHub){
+        gitHub = _gitHub;
     }
 
 }

@@ -26,6 +26,7 @@ public class ProfileController  implements Initializable {
     @FXML private Label label;
     @FXML private ListView myListView;
 
+    private GitHub gitHub;
     private GHMyself you;
     protected List<String> asianCurrencyList = new ArrayList<>();
     protected List<String> europeanCurrencyList = new ArrayList<>();
@@ -36,7 +37,12 @@ public class ProfileController  implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
         //Need to connect to GitHub from LoginController. Except how?
-        PagedIterable<GHRepository> repos = you.listRepositories();
+        PagedIterable<GHRepository> repos = null;
+        try {
+            repos = gitHub.getMyself().listRepositories();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println(repos);
         int count = 0;
         while(repos.iterator().hasNext() && count < 5){
@@ -44,9 +50,9 @@ public class ProfileController  implements Initializable {
             System.out.println(repo.getFullName());
             count++;
         }
-        /*for(GHRepository repo:repos){
+        for(GHRepository repo:repos){
             asianCurrencyList.add(repo.getFullName());
-        }*/
+        }
         asianCurrencyList.add("GHC");
         myListView.itemsProperty().bind(listProperty);
         listProperty.set(FXCollections.observableArrayList(asianCurrencyList));
@@ -56,6 +62,10 @@ public class ProfileController  implements Initializable {
     @FXML
     public void getRepo() {
 
+    }
+
+    public void setupProfileController(GitHub _github){
+        gitHub = _github;
     }
 
 
