@@ -5,24 +5,28 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
-import sample.controller.Controller;
+import sample.controller.ProfileController;
+import sample.controller.RepoController;
 
 import java.io.IOException;
 
 /**
- * Created by ashleychen on 11/25/16.
+ * Created by ashleychen on 11/30/16.
  */
-public class Tree {
-    private GitHub gitHub;
+public class Repo {
 
+    private GHRepository repo;
     public void display(Button btn)throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample/view/UI.fxml"));
 
-        Controller controller = new Controller();
-        controller.setupController(gitHub);
-        loader.setController(controller);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample/view/Repo.fxml"));
+
+
+        RepoController repoController = new RepoController();
+        repoController.setupRepoController(repo);
+        loader.setController(repoController);
         Parent root = loader.load();
         Scene scene = new Scene(root, 600, 700);
         Stage currentStage = (Stage) btn.getScene().getWindow();
@@ -31,7 +35,7 @@ public class Tree {
         currentStage.show();
     }
 
-    public void setupTree (GitHub _gitHub){
-        gitHub = _gitHub;
+    public void setupRepo(GHRepository _repo){
+        repo = _repo;
     }
 }

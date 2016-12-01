@@ -7,15 +7,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="CD-S" level="project" />
     <orderEntry type="library" exported="" name="src" level="project" />
-    <orderEntry type="library" exported="" name="github-api-1.80" level="project" />
-    <orderEntry type="library" exported="" name="jackson-core-2.2.2" level="project" />
-    <orderEntry type="library" exported="" name="jackson-annotations-2.0.1" level="project" />
-    <orderEntry type="library" exported="" name="commons-codec-1.10-javadoc" level="project" />
-    <orderEntry type="library" exported="" name="commons-io-2.5-javadoc" level="project" />
-    <orderEntry type="library" exported="" name="commons-io-2.5-javadoc1" level="project" />
-    <orderEntry type="library" exported="" name="commons-lang-2.6-javadoc" level="project" />
-    <orderEntry type="library" exported="" name="jackson-databind-2.1.4" level="project" />
+    <orderEntry type="library" name="CD-S" level="project" />
+    <orderEntry type="library" name="commons-codec-1.10-tests" level="project" />
+    <orderEntry type="library" name="commons-codec-1.10" level="project" />
+    <orderEntry type="library" name="commons-io-2.5" level="project" />
+    <orderEntry type="library" name="commons-lang-2.6" level="project" />
+    <orderEntry type="library" name="github-api-1.80" level="project" />
+    <orderEntry type="library" name="jackson-annotations-2.2.2" level="project" />
+    <orderEntry type="library" name="jackson-core-2.2.2" level="project" />
+    <orderEntry type="library" name="jackson-databind-2.2.2" level="project" />
   </component>
 </module>
