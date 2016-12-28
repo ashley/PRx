@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+
+<TabPane fx:id="tabs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65">
+    <tabs>
+        <Tab text="Editor">
+            <fx:include fx:id="editorController" source="UI.fxml"/>
+        </Tab>
+        <Tab text="Publisher">
+            <fx:include fx:id="publisher" source="Login.fxml"/>
+        </Tab>
+    </tabs>
+</TabPane>

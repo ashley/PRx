@@ -6,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import org.kohsuke.github.GHRepository;
-import org.kohsuke.github.GitHub;
-import sample.controller.ProfileController;
 import sample.controller.RepoController;
 
 import java.io.IOException;

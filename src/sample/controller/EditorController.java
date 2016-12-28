@@ -15,23 +15,25 @@ import sample.application.Tree;
 import java.io.File;
 import java.util.ArrayList;
 
-public class Controller {
+public class EditorController {
 
     @FXML private Button myButton;
     @FXML private Button leftButton;
     @FXML private Button rightButton;
     @FXML private TextArea outputTextArea;
+    @FXML Button toggleButton = new Button();
 
     private GitHub gitHub;
     private String beforeLink;
     private String afterLink;
 
-    public Controller(){
+    public EditorController(){
     }
 
     @FXML
     private void initialize() {
-        System.out.print("Controller Initialized");
+        System.out.print("EditorController Initialized");
+
         myButton.setOnAction((event) -> {
             String [] str = {beforeLink, afterLink};
             boolean left = false;
@@ -58,6 +60,18 @@ public class Controller {
                 }
             }
 
+        });
+
+        toggleButton.setOnAction((event) -> {
+            try{
+                Profile profile = new Profile();
+                System.out.println(gitHub.toString() + " In Controller");
+                profile.setupProfile(gitHub);
+                profile.display(toggleButton);
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
         });
 
         leftButton.setOnAction((event) -> {

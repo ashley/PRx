@@ -40,7 +40,8 @@ public class ProfileController  implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            repos = gitHub.getMyself().listRepositories();
+            you = gitHub.getMyself();
+            repos = you.listRepositories();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -51,14 +52,15 @@ public class ProfileController  implements Initializable {
         listProperty.set(FXCollections.observableArrayList(repoList));
 
         button.setOnAction((event) -> {
-            try{
-                Repo repo = new Repo();
-                System.out.println(pickedRepo.getFullName() + " In Controller");
-                repo.setupRepo(pickedRepo);
-                repo.display(button);
-            }
-            catch(Exception e){
-                e.printStackTrace();
+            if (pickedRepo != null) {
+                try {
+                    Repo repo = new Repo();
+                    System.out.println(pickedRepo.getFullName() + " In Controller");
+                    repo.setupRepo(pickedRepo);
+                    repo.display(button);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -70,8 +72,9 @@ public class ProfileController  implements Initializable {
     }
 
     @FXML public void handleMouseClick(MouseEvent arg0) throws IOException {
-        System.out.println("clicked on " + myListView.getSelectionModel().getSelectedItem());
-        pickedRepo = gitHub.getMyself().getRepository(myListView.getSelectionModel().getSelectedItem().toString());
+        String repoName = myListView.getSelectionModel().getSelectedItem().toString();
+        System.out.println("clicked on " + repoName);
+        //pickedRepo = you.getRepository(repoName);
     }
 
     public void setupProfileController(GitHub _github){

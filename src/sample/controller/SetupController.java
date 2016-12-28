@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TabPane;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -15,6 +16,8 @@ public class SetupController implements Initializable {
 
     @FXML Button devButton = new Button();
     @FXML Button pubButton = new Button();
+    @FXML TabPane tabs = new TabPane();
+
 
     private int currentScene = 0;
 
