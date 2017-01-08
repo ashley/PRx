@@ -21,7 +21,7 @@ public class Main extends Application {
             try {
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/TestingTab.fxml"));
                 Scene scene = new Scene(root);
-                primaryStage.setTitle("TitleName");
+                primaryStage.setTitle("PrX");
                 primaryStage.setScene(scene);
                 primaryStage.setResizable(false);
                 primaryStage.show();

@@ -11,5 +11,8 @@
         <Tab text="Publisher">
             <fx:include fx:id="publisher" source="Login.fxml"/>
         </Tab>
+        <Tab text="Training">
+            <fx:include fx:id="training" source="Training.fxml"/>
+        </Tab>
     </tabs>
 </TabPane>
