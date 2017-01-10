@@ -28,7 +28,7 @@ public class TabController implements Initializable {
 
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("TabController initatized");
+        System.out.println("TabController initialized");
 
     }
 

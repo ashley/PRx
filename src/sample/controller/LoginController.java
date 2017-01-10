@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LoginController  implements Initializable {
+public class LoginController implements Initializable {
 
     @FXML TextField username = new TextField();
     @FXML PasswordField password = new PasswordField();

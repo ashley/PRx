@@ -1,6 +1,7 @@
 package sample.controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.DirectoryChooser;
@@ -8,12 +9,13 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.nio.charset.StandardCharsets;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * Created by ashleychen on 1/7/17.
  */
-public class TrainingController {
+public class TrainingController implements Initializable {
     @FXML private Button trainingImportButton;
     @FXML private Button entropyModelButton;
     @FXML private Button entropyComputeButton;
@@ -24,16 +26,17 @@ public class TrainingController {
     @FXML private ListView entropyList;
     @FXML private Slider iterationSlider;
     @FXML private RadioButton crossEntropyRadio;
-    @FXML Text iterationLabel;
+    @FXML private Text iterationLabel;
 
 
     private String trainingImportLink;
     private String trainingDestinationLink;
     private int iteration;
+    private boolean crossEntropyToggle;
 
 
     @FXML
-    private void initalize(){
+    public void initialize(URL location, ResourceBundle resources) {
         System.out.println("TrainingController Initialized");
         trainingImportButton.setOnAction((event) -> {
             Stage stage = Stage.class.cast(Control.class.cast(event.getSource()).getScene().getWindow());
@@ -63,10 +66,8 @@ public class TrainingController {
 
         iterationSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
             iteration = newValue.intValue();
-        });
-
-        trainComputerButton.setOnAction((event) -> {
             iterationLabel.setText(Integer.toString(iteration));
         });
+
     }
 }
