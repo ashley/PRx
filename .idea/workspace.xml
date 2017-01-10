@@ -7,23 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/view/Editor.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/controller/Controller.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/view/UI.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/view/sample.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PrX-JARS/sample/controller/Controller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PrX-JARS/sample/view/sample.fxml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/controller/TestingTabController.java" afterPath="$PROJECT_DIR$/src/sample/controller/TabController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/view/TestingTab.fxml" afterPath="$PROJECT_DIR$/src/sample/view/Tab.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PrX-JARS/Main.class" afterPath="$PROJECT_DIR$/out/production/PrX-JARS/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PrX-JARS/sample/application/Profile.class" afterPath="$PROJECT_DIR$/out/production/PrX-JARS/sample/application/Profile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PrX-JARS/sample/application/Tree.class" afterPath="$PROJECT_DIR$/out/production/PrX-JARS/sample/application/Tree.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PrX-JARS/sample/controller/LoginController.class" afterPath="$PROJECT_DIR$/out/production/PrX-JARS/sample/controller/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PrX-JARS/sample/controller/SetupController.class" afterPath="$PROJECT_DIR$/out/production/PrX-JARS/sample/controller/SetupController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PrX-JARS/sample/view/UI.fxml" afterPath="$PROJECT_DIR$/out/production/PrX-JARS/sample/view/UI.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/application/Editor.java" afterPath="$PROJECT_DIR$/src/sample/application/Editor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/application/Profile.java" afterPath="$PROJECT_DIR$/src/sample/application/Profile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/application/Tree.java" afterPath="$PROJECT_DIR$/src/sample/application/Tree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/controller/EditorController.java" afterPath="$PROJECT_DIR$/src/sample/controller/EditorController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/sample/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/controller/SetupController.java" afterPath="$PROJECT_DIR$/src/sample/controller/SetupController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/controller/TestingTabController.java" afterPath="$PROJECT_DIR$/src/sample/controller/TestingTabController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/controller/TrainingController.java" afterPath="$PROJECT_DIR$/src/sample/controller/TrainingController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/TestingTab.fxml" afterPath="$PROJECT_DIR$/src/sample/view/TestingTab.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/view/Training.fxml" afterPath="$PROJECT_DIR$/src/sample/view/Training.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -84,20 +78,20 @@
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestingTab.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/view/TestingTab.fxml">
+      <file leaf-file-name="Tab.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/view/Tab.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+            <state relative-caret-position="315">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -141,8 +135,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestingTabController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/controller/TestingTabController.java">
+      <file leaf-file-name="TabController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/controller/TabController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
@@ -229,9 +223,9 @@
         <option value="$PROJECT_DIR$/src/sample/view/Editor.fxml" />
         <option value="$PROJECT_DIR$/src/sample/controller/EditorController.java" />
         <option value="$PROJECT_DIR$/src/sample/controller/TrainingController.java" />
-        <option value="$PROJECT_DIR$/src/sample/view/TestingTab.fxml" />
         <option value="$PROJECT_DIR$/src/sample/view/Training.fxml" />
         <option value="$PROJECT_DIR$/src/sample/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/sample/view/TestingTab.fxml" />
       </list>
     </option>
   </component>
@@ -598,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483848978841</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Modified Dev view and Cotroller. Training does not initialize.">
+      <created>1484021865738</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1484021865738</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -661,7 +662,8 @@
     <MESSAGE value="Created Repo Window" />
     <MESSAGE value="Switched to tabs, but trouble having consistent controllers work" />
     <MESSAGE value="Added Training Tab" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Training Tab" />
+    <MESSAGE value="Modified Dev view and Cotroller. Training does not initialize." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified Dev view and Cotroller. Training does not initialize." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -895,7 +897,7 @@
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -927,7 +929,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/TestingTabController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/controller/TabController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
@@ -967,13 +969,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/view/TestingTab.fxml">
+    <entry file="file://$PROJECT_DIR$/src/sample/view/Tab.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        <state relative-caret-position="315">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>

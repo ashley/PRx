@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sample.application.Login;
-import sample.controller.TestingTabController;
 
 public class Main extends Application {
     private int knob = 0;
@@ -19,7 +18,7 @@ public class Main extends Application {
         }
         else{
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("/sample/view/TestingTab.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/sample/view/Tab.fxml"));
                 Scene scene = new Scene(root);
                 primaryStage.setTitle("PrX");
                 primaryStage.setScene(scene);

@@ -18,17 +18,17 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class TestingTabController implements Initializable {
+public class TabController implements Initializable {
 
     @FXML TabPane tabs = new TabPane();
 
 
-    public TestingTabController(){
+    public TabController(){
     }
 
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("TestingTabController initatized");
+        System.out.println("TabController initatized");
 
     }
 
