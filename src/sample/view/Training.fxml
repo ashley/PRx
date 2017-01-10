@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.collections.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.TrainingController">
     <children>
         <AnchorPane prefHeight="401.0" prefWidth="600.0">
             <children>
-                <Button layoutX="121.0" layoutY="59.0" mnemonicParsing="false" text="Import" />
-                <Text layoutX="41.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Import filtered changes in a folder here:" />
-                <ListView layoutX="50.0" layoutY="101.0" prefHeight="200.0" prefWidth="200.0" />
+                <Button fx:id="trainingImportButton" layoutX="182.0" layoutY="55.0" mnemonicParsing="false" text="Import" />
+                <Text layoutX="60.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtered Changes:" />
+                <ListView fx:id="trainList" layoutX="50.0" layoutY="128.0" prefHeight="173.0" prefWidth="200.0" />
                 <Separator layoutX="297.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="5.0" />
-                <Slider layoutX="93.0" layoutY="336.0" />
+                <Slider fx:id="iterationSlider" layoutX="93.0" layoutY="336.0" />
                 <Text layoutX="30.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adjust iterations (increases CPU)" wrappingWidth="243.0390625" />
-                <Button layoutX="122.0" layoutY="360.0" mnemonicParsing="false" text="TRAIN" />
+                <Button fx:id="trainComputerButton" layoutX="122.0" layoutY="360.0" mnemonicParsing="false" text="TRAIN" />
+                <Button fx:id="trainingDestinationButton" layoutX="182.0" layoutY="89.0" mnemonicParsing="false" text="Save" />
+                <Text layoutX="61.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Final Destination:" />
+                <Text layoutX="36.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Build Your Training Model">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Text>
+                <Text layoutX="366.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generate Entropy">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Text>
+                <Button fx:id="entropyModelButton" layoutX="477.0" layoutY="55.0" mnemonicParsing="false" text="Import" />
+                <Text layoutX="371.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trained Model:" />
+                <ListView fx:id="entropyList" layoutX="345.0" layoutY="201.0" prefHeight="173.0" prefWidth="200.0" />
+                <Button fx:id="entropyComputeButton" layoutX="404.0" layoutY="159.0" mnemonicParsing="false" text="COMPTUE" />
+                <Button fx:id="entropyTestButton" layoutX="477.0" layoutY="89.0" mnemonicParsing="false" text="Import" />
+                <Text layoutX="373.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test Changes:" />
+                <RadioButton fx:id="crossEntropyRadio" layoutX="389.0" layoutY="128.0" mnemonicParsing="false" text="Cross-Entropy" />
+                <Text fx:id="iterationLabel" layoutX="73.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
             </children>
         </AnchorPane>
     </children>
 </FlowPane>
-

@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<TabPane fx:id="tabs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65">
-    <tabs>
-        <Tab text="Editor">
-            <fx:include fx:id="editorController" source="UI.fxml"/>
-        </Tab>
-        <Tab text="Publisher">
-            <fx:include fx:id="publisher" source="Login.fxml"/>
-        </Tab>
-        <Tab text="Training">
-            <fx:include fx:id="training" source="Training.fxml"/>
-        </Tab>
-    </tabs>
-</TabPane>
+<AnchorPane fx:id="fxid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.TestingTabController">
+<children>
+    <TabPane fx:id="tabs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65">
+        <tabs>
+            <Tab text="Editor">
+                <fx:include fx:id="editorController" source="Editor.fxml"/>
+            </Tab>
+            <Tab text="Publisher">
+                <fx:include fx:id="publisherController" source="Login.fxml"/>
+            </Tab>
+            <Tab text="Training">
+                <fx:include fx:id="trainingController" source="Training.fxml"/>
+            </Tab>
+        </tabs>
+    </TabPane>
+</children>
+</AnchorPane>

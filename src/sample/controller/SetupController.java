@@ -29,7 +29,7 @@ public class SetupController implements Initializable {
 
         devButton.setOnAction(e->{
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("/sample/view/UI.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/sample/view/Editor.fxml"));
                 Scene scene = new Scene(root, 1200, 700);
                 Stage currentStage = (Stage) devButton.getScene().getWindow();
                 currentStage.setTitle("PrX");

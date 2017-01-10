@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import org.kohsuke.github.GitHub;
-import sample.controller.Controller;
+import sample.controller.EditorController;
 
 import java.io.IOException;
 
@@ -18,9 +18,9 @@ public class Tree {
 
     public void display(Button btn)throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample/view/UI.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample/view/Editor.fxml"));
 
-        Controller controller = new Controller();
+        EditorController controller = new EditorController();
         controller.setupController(gitHub);
         loader.setController(controller);
         Parent root = loader.load();

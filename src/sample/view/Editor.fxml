@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.EditorController">
+    <children>
+        <AnchorPane prefHeight="650.0" prefWidth="600.0">
+            <children>
+                <Text layoutX="221.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Distiller">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Text>
+                <Text layoutX="110.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paste the locations of your java files. The before field should be the location of your file before the change. The after field is the location of your file with the change." wrappingWidth="305.87548828125">
+                    <font>
+                        <Font size="9.0" />
+                    </font>
+                </Text>
+                <Button fx:id="leftButton" layoutX="144.0" layoutY="97.0" mnemonicParsing="false" text="Import" />
+                <Text layoutX="82.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Left File:" />
+                <TextArea fx:id="leftTextArea" layoutX="16.0" layoutY="131.0" prefHeight="242.0" prefWidth="277.0" />
+                <Button fx:id="rightButton" layoutX="436.0" layoutY="97.0" mnemonicParsing="false" text="Import" />
+                <Text layoutX="362.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Right File:" />
+                <TextArea fx:id="rightTextArea" layoutX="308.0" layoutY="131.0" prefHeight="242.0" prefWidth="277.0" />
+                <TextArea fx:id="outputTextArea" layoutX="15.0" layoutY="419.0" prefHeight="188.0" prefWidth="570.0" />
+                <Button fx:id="myButton" layoutX="259.0" layoutY="386.0" mnemonicParsing="false" text="COMPUTE" />
+                <Button fx:id="testFilesButton" layoutX="423.0" layoutY="54.0" mnemonicParsing="false" text="Test Files">
+                    <font>
+                        <Font size="9.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</FlowPane>

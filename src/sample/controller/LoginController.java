@@ -3,6 +3,7 @@ package sample.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import org.kohsuke.github.GHEmail;
 import org.kohsuke.github.GitHub;
 import sample.application.Tree;
@@ -28,6 +29,7 @@ public class LoginController  implements Initializable {
 
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("LoginController Initialized");
 
         loginButton.setOnAction((event) -> {
             String [] str = {user, pass};

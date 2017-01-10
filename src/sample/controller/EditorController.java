@@ -13,6 +13,11 @@ import sample.application.Profile;
 import sample.application.Tree;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class EditorController {
@@ -20,8 +25,10 @@ public class EditorController {
     @FXML private Button myButton;
     @FXML private Button leftButton;
     @FXML private Button rightButton;
+    @FXML private Button testFilesButton;
     @FXML private TextArea outputTextArea;
-    @FXML Button toggleButton = new Button();
+    @FXML private TextArea leftTextArea;
+    @FXML private TextArea rightTextArea;
 
     private GitHub gitHub;
     private String beforeLink;
@@ -62,43 +69,70 @@ public class EditorController {
 
         });
 
-        toggleButton.setOnAction((event) -> {
-            try{
-                Profile profile = new Profile();
-                System.out.println(gitHub.toString() + " In Controller");
-                profile.setupProfile(gitHub);
-                profile.display(toggleButton);
-            }
-            catch(Exception e){
-                e.printStackTrace();
-            }
-        });
-
         leftButton.setOnAction((event) -> {
             Stage stage = Stage.class.cast(Control.class.cast(event.getSource()).getScene().getWindow());
             try {
-                File fi = new FileChooser().showOpenDialog(stage);
+                FileChooser fileChooser = new FileChooser();
+                // Set extension filter
+                FileChooser.ExtensionFilter extFilter =
+                        new FileChooser.ExtensionFilter("TEXT files (*.txt)", "*.txt");
+                fileChooser.getExtensionFilters().add(extFilter);
+                File fi = fileChooser.showOpenDialog(stage);
                 beforeLink = fi.getAbsolutePath();
+                System.out.println(beforeLink);
+                String content = readFile(beforeLink, StandardCharsets.UTF_8);
+                leftTextArea.setText(content);
+
             }catch (Exception e){
                 System.out.print("Path selection canceled");
                 e.printStackTrace();
             }
         });
+
+        testFilesButton.setOnAction((event) -> {
+            File left = new File("src/sample/testfiles/TestLeft.txt");
+            beforeLink = left.getAbsolutePath();
+            try {
+                System.out.println(beforeLink);
+                leftTextArea.setText(readFile(beforeLink, StandardCharsets.UTF_8));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            File right = new File("src/sample/testfiles/TestRight.txt");
+            afterLink = right.getAbsolutePath();
+            try {
+                System.out.println(afterLink);
+                rightTextArea.setText(readFile(afterLink, StandardCharsets.UTF_8));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
 
         rightButton.setOnAction((event) -> {
             Stage stage = Stage.class.cast(Control.class.cast(event.getSource()).getScene().getWindow());
             try {
-                File fi = new FileChooser().showOpenDialog(stage);
+                FileChooser fileChooser = new FileChooser();
+                // Set extension filter
+                FileChooser.ExtensionFilter extFilter =
+                        new FileChooser.ExtensionFilter("TEXT files (*.txt)", "*.txt");
+                fileChooser.getExtensionFilters().add(extFilter);
+                File fi = fileChooser.showOpenDialog(stage);
                 afterLink = fi.getAbsolutePath();
+                rightTextArea.setText(readFile(afterLink, StandardCharsets.UTF_8));
             }catch (Exception e){
                 System.out.print("Path selection canceled");
-                e.printStackTrace();
             }
         });
     }
 
     public void setupController(GitHub _gitHub){
         gitHub = _gitHub;
+    }
+
+    static String readFile(String path, Charset encoding) throws IOException {
+        byte[] encoded = Files.readAllBytes(Paths.get(path));
+        return new String(encoded, encoding);
     }
 
 }

@@ -21,12 +21,6 @@ import java.util.ResourceBundle;
 public class TestingTabController implements Initializable {
 
     @FXML TabPane tabs = new TabPane();
-    @FXML private Editor editor;
-    @FXML private EditorController editorController;
-    @FXML private Login publisher;
-    @FXML private LoginController publisherController;
-    @FXML private Training training;
-    @FXML private TrainingController trainingController;
 
 
     public TestingTabController(){
@@ -34,6 +28,7 @@ public class TestingTabController implements Initializable {
 
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("TestingTabController initatized");
 
     }
 

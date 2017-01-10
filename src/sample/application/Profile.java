@@ -7,7 +7,6 @@ import javafx.scene.control.Button;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.kohsuke.github.GitHub;
-import sample.controller.Controller;
 import sample.controller.ProfileController;
 
 import java.io.IOException;

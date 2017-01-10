@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public class Editor {
     public  void display() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/UI.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/Editor.fxml"));
         Stage window = new Stage();
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Login");
