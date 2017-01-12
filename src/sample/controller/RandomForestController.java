@@ -1,7 +1,10 @@
 package sample.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.DirectoryChooser;
@@ -10,7 +13,11 @@ import javafx.stage.Stage;
 import weka.classifiers.trees.RandomForest;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -24,10 +31,39 @@ public class RandomForestController implements Initializable {
     @FXML private Slider foldsSlider;
     @FXML private Text foldsLabel;
     @FXML private Text fileLabel;
-    @FXML private TextArea outputText;
+    @FXML private PieChart accuracyChart;
+    @FXML private Button testDataButton;
+    @FXML private Text p1text;
+    @FXML private Text r1text;
+    @FXML private Text f1text;
+    @FXML private Text p2text;
+    @FXML private Text r2text;
+    @FXML private Text f2text;
+    @FXML private Text p1Label;
+    @FXML private Text f1Label;
+    @FXML private Text r1Label;
+    @FXML private Text p2Label;
+    @FXML private Text f2Label;
+    @FXML private Text r2Label;
+    @FXML private Text correctResultText;
+    @FXML private Text incorrectResultText;
+    @FXML private ProgressBar compileProgressBar;
+    @FXML private Text acceptedLabel;
+    @FXML private Text rejectedLabel;
+    @FXML private Text acceptedText;
+    @FXML private Text rejectedText;
+
 
     private int fold;
     private String filePath;
+    private double correct;
+    private double incorrect;
+    private String p1;
+    private String r1;
+    private String f1;
+    private String p2;
+    private String r2;
+    private String f2;
 
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
@@ -66,9 +102,32 @@ public class RandomForestController implements Initializable {
             if(file) {
                 try {
                     ArrayList<String> al = UI.RandomForestExecute.main(str);
-                    for (int i = 0; i < al.size(); i++) {
-                        outputText.appendText("\n" + al.get(i).toString());
-                    }
+                    correct = Double.parseDouble(al.get(0));
+                    incorrect = Double.parseDouble(al.get(1));
+                    NumberFormat nf = DecimalFormat.getInstance();
+                    nf.setMaximumFractionDigits(2);
+                    acceptedText.setText(nf.format(correct/(correct+incorrect)*100)+"%");
+                    rejectedText.setText(nf.format(incorrect/(correct+incorrect)*100)+"%");
+                    acceptedLabel.setVisible(true);
+                    rejectedLabel.setVisible(true);
+                    acceptedText.setVisible(true);
+                    rejectedText.setVisible(true);
+                    p1text.setText(al.get(2));
+                    r1text.setText(al.get(3));
+                    f1text.setText(al.get(4));
+                    p2text.setText(al.get(5));
+                    r2text.setText(al.get(6));
+                    f2text.setText(al.get(7));
+                    p1Label.setVisible(true);
+                    f1Label.setVisible(true);
+                    r1Label.setVisible(true);
+                    p2Label.setVisible(true);
+                    f2Label.setVisible(true);
+                    r2Label.setVisible(true);
+                    correctResultText.setVisible(true);
+                    incorrectResultText.setVisible(true);
+                    accuracyChart.setData(getChartData(correct, incorrect));
+                    accuracyChart.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -78,5 +137,20 @@ public class RandomForestController implements Initializable {
 
         });
 
+        testDataButton.setOnAction((event) -> {
+            File fi = new File("src/sample/testfiles/FilterData.txt");
+            filePath = fi.getAbsolutePath();
+            fileLabel.setText(filePath);
+            fold = 10;
+            foldsLabel.setText("10");
+        });
+
+    }
+
+    private ObservableList<PieChart.Data> getChartData(double correct, double incorrect) {
+        ObservableList<PieChart.Data> answer = FXCollections.observableArrayList();
+        answer.addAll(new PieChart.Data("Correct", correct),
+                new PieChart.Data("Incorrect", incorrect));
+        return answer;
     }
 }
