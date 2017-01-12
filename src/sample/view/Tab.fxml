@@ -16,6 +16,9 @@
             <Tab text="Training">
                 <fx:include fx:id="trainingController" source="Training.fxml"/>
             </Tab>
+            <Tab text="Random Forest">
+                <fx:include fx:id="randomForestController" source="RandomForest.fxml"/>
+            </Tab>
         </tabs>
     </TabPane>
 </children>

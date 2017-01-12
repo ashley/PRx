@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.RandomForestController">
+    <children>
+        <Button fx:id="filePathButton" layoutX="139.0" layoutY="60.0" mnemonicParsing="false" text="Import" />
+        <Text layoutX="46.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtered Data:" />
+        <TextArea fx:id="outputText" layoutX="46.0" layoutY="181.0" prefHeight="437.0" prefWidth="517.0">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </TextArea>
+        <Slider fx:id="foldsSlider" layoutX="198.0" layoutY="108.0" />
+        <Text fx:id="fileLabel" layoutX="206.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="null" wrappingWidth="356.72802734375" />
+        <Text layoutX="46.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Folds:" />
+        <Text fx:id="foldsLabel" layoutX="169.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+        <Button fx:id="compileButton" layoutX="46.0" layoutY="142.0" mnemonicParsing="false" text="Compile" />
+        <Text layoutX="46.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random Forest Analyzer">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Text>
+    </children>
+
+</AnchorPane>
